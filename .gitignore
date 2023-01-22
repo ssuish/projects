@@ -99,7 +99,7 @@ cucumber-report.json
 **/.vscode test/**
 **/.vscode-smoke/**
 **/.venv*/
-**/.env
+**/env
 port.txt
 precommit.hook
 pythonFiles/lib/**

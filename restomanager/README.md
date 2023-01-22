@@ -2,7 +2,7 @@
 
 Public version of my final project in IT216\L (Python Programming).
 
-## MVP Features
+## MVP Goal Features
 
 - Basic CLI app with database and CRUD functions.
 - Basic login setup.

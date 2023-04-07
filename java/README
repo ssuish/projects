@@ -1,29 +1,13 @@
 # Java Curriculum Guide
 
-**Reminder:** This Roadmap may apply to Introduction to Computer Science and programming.
+**Reminder:**  
+
+- **Roadmap is underconstruction.** This guide will cover essential concepts and practices in getting started in Java specifically. It includes Object Oriented Software Development (OOSD) in Java, Java Swing and AWT, Java standard libraries, multi-threading, IO, Java 17 API, and Maven.
 
 ```mermaid
 flowchart TD
-    root(<h2>Java Roadmap</h2>)
-        sub_root1([<h3>Programming Essentials</h3>])
-            br1([<b>Data <br>Structures 1</b>])
-                node1[[Array<br> Linked List<br> Stacks<br> Queues<br> Hast Tables]]
-            br2([<b>Algoritms 1</b>])
-                node2([Analysis of Algorithms])
-                node3([Sorting])
-                    subnode1[[Insertion Sort<br> Selection Sort<br> Bubble Sort<br> Merge Sort<br> Quick Sort]]
-                node4([Searching])
-                    subnode2[[Linear Search<br> Binary Search]]
-                node5([Recursion])
+    root(CS Fundamentals)
+    root1(Introduction to Java)
 
-    root-->sub_root1
-    sub_root1-->br1
-    sub_root1-->br2
-    br1-->node1
-    br2-->node2
-    br2-->node3
-    br2-->node4
-    br2-->node5
-    node3-->subnode1
-    node4-->subnode2
+    root-->root1
 ```

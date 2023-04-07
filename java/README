@@ -1,9 +1,11 @@
 # Java Curriculum Guide
 
+**Reminder:** This Roadmap may apply to Introduction to Computer Science and programming.
+
 ```mermaid
 flowchart TD
     root(<h2>Java Roadmap</h2>)
-        sub_root1([<h3>Essentials</h3>])
+        sub_root1([<h3>Programming Essentials</h3>])
             br1([<b>Data <br>Structures 1</b>])
                 node1[[Array<br> Linked List<br> Stacks<br> Queues<br> Hast Tables]]
             br2([<b>Algoritms 1</b>])

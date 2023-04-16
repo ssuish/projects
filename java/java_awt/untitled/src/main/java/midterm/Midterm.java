@@ -1,13 +1,10 @@
 package midterm;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 
 
-public class Midterm extends Frame implements ActionListener {
+public class Midterm extends Frame implements ActionListener, ItemListener {
 
     /*
      * Things to-do:
@@ -55,14 +52,13 @@ public class Midterm extends Frame implements ActionListener {
     Label lblMathFunctionOut = new Label("Output");
     CheckboxGroup cbgMathFunction = new CheckboxGroup();
     Checkbox cbSqrt = new Checkbox("Sqrt", cbgMathFunction, false);
-    Checkbox cbSin = new Checkbox("Sin", cbgMathFunction, false);
-    Checkbox cbCos = new Checkbox("Cos", cbgMathFunction, false);
-    Checkbox cbTan = new Checkbox("Tan", cbgMathFunction, false);
+    Checkbox cbCeil = new Checkbox("Ciel", cbgMathFunction, false);
+    Checkbox cbFloor = new Checkbox("Floor", cbgMathFunction, false);
+    Checkbox cbAbs = new Checkbox("Abs", cbgMathFunction, false);
     Checkbox cbRound = new Checkbox("Round", cbgMathFunction, false);
     TextField txtBaseIn = new TextField(10);
-    TextField txtSubIn = new TextField(10);
     TextField txtOut = new TextField(10);
-    Button btnConvert5 = new Button("Convert");
+    Button btnConvert5 = new Button("Clear");
 
     public Midterm() {
         setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
@@ -139,10 +135,14 @@ public class Midterm extends Frame implements ActionListener {
         chcCurrency.add("PHP -> USD");
         chcCurrency.add("USD -> JPY");
         chcCurrency.add("JPY -> USD");
+        chcCurrency.add("JPY -> PHP");
+        chcCurrency.add("PHP -> JPY");
 
         txtCurrency1.addActionListener(this);
         txtCurrency2.addActionListener(this);
         btnConvert4.addActionListener(this);
+
+        txtCurrency2.setEditable(false);
 
         Panel pnlCurrencyConverter = new Panel();
         pnlCurrencyConverter.setLayout(new GridLayout(4, 2, 5, 5));
@@ -160,8 +160,12 @@ public class Midterm extends Frame implements ActionListener {
 
         // Math Component
         txtBaseIn.addActionListener(this);
-        txtSubIn.addActionListener(this);
         txtOut.addActionListener(this);
+        cbSqrt.addItemListener(this);
+        cbCeil.addItemListener(this);
+        cbFloor.addItemListener(this);
+        cbAbs.addItemListener(this);
+        cbRound.addItemListener(this);
         btnConvert5.addActionListener(this);
 
         txtOut.setEditable(false);
@@ -169,17 +173,15 @@ public class Midterm extends Frame implements ActionListener {
         Panel pnlCheckboxMathFunction = new Panel();
         pnlCheckboxMathFunction.setLayout(new GridLayout(5, 1, 1, 5));
         pnlCheckboxMathFunction.add(cbSqrt);
-        pnlCheckboxMathFunction.add(cbSin);
-        pnlCheckboxMathFunction.add(cbCos);
-        pnlCheckboxMathFunction.add(cbTan);
+        pnlCheckboxMathFunction.add(cbCeil);
+        pnlCheckboxMathFunction.add(cbFloor);
+        pnlCheckboxMathFunction.add(cbAbs);
         pnlCheckboxMathFunction.add(cbRound);
 
         Panel pnlIOMathFunction = new Panel();
-        pnlIOMathFunction.setLayout(new GridLayout(6, 2, 1, 1));
+        pnlIOMathFunction.setLayout(new GridLayout(5, 2, 1, 1));
         pnlIOMathFunction.add(lblMathFunctionIn);
         pnlIOMathFunction.add(txtBaseIn);
-        pnlIOMathFunction.add(lblMathFunctionSub);
-        pnlIOMathFunction.add(txtSubIn);
         pnlIOMathFunction.add(lblMathFunctionOut);
         pnlIOMathFunction.add(txtOut);
         pnlIOMathFunction.add(new Label());
@@ -201,6 +203,7 @@ public class Midterm extends Frame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
+        // Unit Converter
         if (e.getSource() == btnConvert1) {
             double lengthIn = Double.parseDouble(txtLengthIn.getText());
             double lengthOut = 0;
@@ -256,8 +259,70 @@ public class Midterm extends Frame implements ActionListener {
             }
             txtVolumeOut.setText(String.valueOf(volumeOut));
         }
+
+        // Currency Converter
+        if (e.getSource() == btnConvert4) {
+            double currencyIn = Double.parseDouble(txtCurrency1.getText());
+            double currencyOut = 0;
+            currencyOut = currencyIn / 2;
+            switch (chcCurrency.getSelectedItem()){
+                case "USD -> PHP":
+                    currencyOut = currencyIn * 50;
+                    break;
+                case "PHP -> USD":
+                    currencyOut = currencyIn / 50;
+                    break;
+                case "USD -> JPY":
+                    currencyOut = currencyIn * 100;
+                    break;
+                case "JPY -> USD":
+                    currencyOut = currencyIn / 100;
+                    break;
+                case "JPY -> PHP":
+                    currencyOut = currencyIn * 2;
+                    break;
+                case "PHP -> JPY":
+                    currencyOut = currencyIn / 2;
+                    break;
+            }
+                txtCurrency2.setText(String.valueOf(currencyOut));
+        }
+
+        // Math Function
+        if (e.getSource() == btnConvert5) {
+            txtBaseIn.setText("");
+            txtOut.setText("");
+            cbSqrt.setState(false);
+            cbCeil.setState(false);
+            cbFloor.setState(false);
+            cbAbs.setState(false);
+            cbRound.setState(false);
+        }
     }
 
+    public void itemStateChanged(ItemEvent e) {
+        // Math Function
+        double baseIn = Double.parseDouble(txtBaseIn.getText());
+        double out = 0;
+
+        if (cbSqrt.getState() == true){
+            out = Math.sqrt(baseIn);
+        }
+        if (cbCeil.getState() == true){
+            out = Math.ceil(baseIn);
+        }
+        if (cbFloor.getState() == true){
+            out = Math.floor(baseIn);
+        }
+        if (cbAbs.getState() == true){
+            out = Math.abs(baseIn);
+        }
+        if (cbRound.getState() == true){
+            out = Math.round(baseIn);
+        }
+
+        txtOut.setText(String.valueOf(out));
+    }
 
     public static void main(String[] args) {
         Midterm AppWin = new Midterm();

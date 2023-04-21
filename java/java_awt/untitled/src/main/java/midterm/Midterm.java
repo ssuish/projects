@@ -265,7 +265,7 @@ public class Midterm extends Frame implements ActionListener, ItemListener {
             double currencyIn = Double.parseDouble(txtCurrency1.getText());
             double currencyOut = 0;
             currencyOut = currencyIn / 2;
-            switch (chcCurrency.getSelectedItem()){
+            switch (chcCurrency.getSelectedItem()) {
                 case "USD -> PHP":
                     currencyOut = currencyIn * 50;
                     break;
@@ -285,7 +285,7 @@ public class Midterm extends Frame implements ActionListener, ItemListener {
                     currencyOut = currencyIn / 2;
                     break;
             }
-                txtCurrency2.setText(String.valueOf(currencyOut));
+            txtCurrency2.setText(String.valueOf(currencyOut));
         }
 
         // Math Function
@@ -305,19 +305,19 @@ public class Midterm extends Frame implements ActionListener, ItemListener {
         double baseIn = Double.parseDouble(txtBaseIn.getText());
         double out = 0;
 
-        if (cbSqrt.getState() == true){
+        if (cbSqrt.getState()) {
             out = Math.sqrt(baseIn);
         }
-        if (cbCeil.getState() == true){
+        if (cbCeil.getState()) {
             out = Math.ceil(baseIn);
         }
-        if (cbFloor.getState() == true){
+        if (cbFloor.getState()) {
             out = Math.floor(baseIn);
         }
-        if (cbAbs.getState() == true){
+        if (cbAbs.getState()) {
             out = Math.abs(baseIn);
         }
-        if (cbRound.getState() == true){
+        if (cbRound.getState()) {
             out = Math.round(baseIn);
         }
 

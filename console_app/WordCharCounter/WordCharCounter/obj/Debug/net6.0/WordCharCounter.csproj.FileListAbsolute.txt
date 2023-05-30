@@ -1,0 +1,15 @@
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\bin\Debug\net6.0\WordCharCounter.exe
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\bin\Debug\net6.0\WordCharCounter.deps.json
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\bin\Debug\net6.0\WordCharCounter.runtimeconfig.json
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\bin\Debug\net6.0\WordCharCounter.dll
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\bin\Debug\net6.0\WordCharCounter.pdb
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\obj\Debug\net6.0\WordCharCounter.csproj.AssemblyReference.cache
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\obj\Debug\net6.0\WordCharCounter.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\obj\Debug\net6.0\WordCharCounter.AssemblyInfoInputs.cache
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\obj\Debug\net6.0\WordCharCounter.AssemblyInfo.cs
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\obj\Debug\net6.0\WordCharCounter.csproj.CoreCompileInputs.cache
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\obj\Debug\net6.0\WordCharCounter.dll
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\obj\Debug\net6.0\refint\WordCharCounter.dll
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\obj\Debug\net6.0\WordCharCounter.pdb
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\obj\Debug\net6.0\WordCharCounter.genruntimeconfig.cache
+D:\dev\repos\projects\console_app\WordCharCounter\WordCharCounter\obj\Debug\net6.0\ref\WordCharCounter.dll

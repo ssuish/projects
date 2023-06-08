@@ -61,7 +61,17 @@ int main(){
     */
 
     // std::cin
+    // reads input from the keyboard using extraction operator (>>). The input must be stored in
+    // a variable to be used.
+    int z{};
+    std::cin >> x; 
+    std::cout << "You entered: " << x << "\n";
 
+    // inputing multiple values in single line
+    int m1{};
+    int m2{};
+    std::cin >> m1 >> m2;
+    std::cout << "You entered: " << m1 << " and " << m2 << '\n'; 
 
     // Test this following input on the program below.
     // input: 'h', 3.7, -3, "hello", 3000000000, 123abc

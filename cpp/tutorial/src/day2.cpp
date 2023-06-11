@@ -79,6 +79,7 @@ int main(){
     int in{};
     std::cin >> in;
     std::cout << "Output: " << in << '\n';
+    // IMPORTANT: Investigate this input/output behavior!
 
     return 0;
 }

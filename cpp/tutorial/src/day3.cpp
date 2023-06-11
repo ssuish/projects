@@ -10,8 +10,8 @@ int main(){
         unitialized     - the object is has not given a known value yet.
     */
 
-   int x;
-   std::cout << x << '\n'; // what's inside x? Idk.
+   int x; // We will never know the value of uninitialized variable.
+   std::cout << x << '\n'; // what's inside x? Idk., this causes undefined behavior.
 
    /*
         Observations on undefined behavior

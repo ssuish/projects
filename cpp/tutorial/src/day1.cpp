@@ -55,5 +55,8 @@ int main(){
         List initialization is generally preferred over other forms of initialization.
     */
 
+    // What we should use? It is recommended to use list initialization for primitive data types, but
+    // we can use copy initialization for any other data types.
 
+    return 0;
 }

@@ -3,13 +3,14 @@
 int getValueFromUser()
 {
     std::cout << "Enter an Integer: ";
-    int input{ };
+    int input{ }; 
     std::cin >> input;
+
     return input;
 }
 
 int main(){
-    int num {getValueFromUser()};
+    int num {getValueFromUser()}; 
     std::cout << num << "doubled is: " << num * 2 << '\n';
 
     // value-returning function that does not have a return type will produce undefined behavior.
@@ -27,7 +28,6 @@ int main(){
 // int return7()
 // {
 //     return 7;
-
 //     int return9()
 //     {
 //         return 9;

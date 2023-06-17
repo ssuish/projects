@@ -30,8 +30,8 @@ int main(){
     */
 
     std::cout << "Starting main()\n";
-    doPrint();
+    doPrint(); 
     std::cout << "Ending main()\n";
 
-    return 0;
+    return 0; 
 }

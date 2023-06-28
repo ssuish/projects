@@ -63,7 +63,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeBuildCommandLine>gcc -Wall -std=c99 /*.c -o game</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>gcc -Wall -std=c99 *.c -lSDL2 -o game</NMakeBuildCommandLine>
     <NMakeOutput>SDLGameMakefile.exe</NMakeOutput>
     <NMakeCleanCommandLine>rm game</NMakeCleanCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>

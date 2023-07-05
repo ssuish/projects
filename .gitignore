@@ -78,3 +78,6 @@ fabric.properties
 cpp/.vscode/launch.json
 cpp/.vscode/settings.json
 cpp/.vscode/tasks.json
+cpp/RayLibPingPong/RayLibPingPong.sln
+cpp/RayLibPingPong/RayLibPingPong.vcxproj
+cpp/RayLibPingPong/RayLibPingPong.vcxproj.filters

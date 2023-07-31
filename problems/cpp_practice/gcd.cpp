@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -19,14 +18,12 @@ int main()
     {
         int m = 0;
         cin >> m;
-        int n[m] = { };
+        int n[m] = {};
         for (int j = 0; j < m; ++j)
-            cin >> n[j]; 
-
+            cin >> n[j];
         int output = n[0];
         for (int j = 1; j < m - 1; ++j)
             output = gcd(output, n[i]);
-
         cout << output;
     }
     return 0;

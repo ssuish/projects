@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "brb/VrHNdQYOT36tWz6TwIcmoWl3BMG09uKR7a2BjeOf3k9n3m0s8bN5Uhz6u2n5ZJN/uRcIZyV3NCJAEyyTCw==",
+  "success": true,
+  "projectFilePath": "D:\\dev\\repos\\projects\\web\\CounterApp\\CounterApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\quido\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.18.1\\microsoft.visualstudio.azure.containers.tools.targets.1.18.1.nupkg.sha512"
+  ],
+  "logs": []
+}
